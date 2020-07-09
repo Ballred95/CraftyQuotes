@@ -1,11 +1,14 @@
 import React from 'react' 
+import Pics from './pics'
+import Clipart from './clipart'
+import Fonts from './fonts'
 
 export default function Tools(props) {
     return (
     <div className='tools'>
-        <div className = 'pics'></div>
-        <div className = 'clip-art'></div>
-        <div className = 'fonts'></div>
+        <Pics />
+        <Clipart />
+        <Fonts />
     </div>
     )
 }
