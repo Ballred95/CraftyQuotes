@@ -1,26 +1,16 @@
+
+
 body {
     margin: 0;
+    padding: 0;
     
 }
 
-.home-screen-wrapper {
-    
+.work-station-wrapper {
+    height: 87vh;
+    width: 100vw;
 }
 
-.window {
-    width: 100vw;
-    height: 70vh;
-}
-
-.tools {
-    background-color: red;
-    width: 100vw;
-    height: 30vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
 
    
 
-   
-    
-}
