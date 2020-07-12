@@ -13,19 +13,22 @@ body {
 .home-screen-wrapper {
     background-color: #E7E7E7;
     border: 5px solid #CACACA;
+    
     min-height: -webkit-fill-available;
-    // position: fixed;
+    position: fixed;
+    min-width: -webkit-fill-available;
+
     
 
-    .work-station-wrapper {
-        height: 87vh;
-        // width: 100vw;
-    }
+    // .work-station-wrapper {
+    //     height: 87vh;
+    //     // width: 100vw;
+    // }
 
-    .tools {
-        height: Calc(100vh - 87vh);
+    // .tools {
+    //     height: Calc(100vh - 87vh);
         
-    }
+    // }
 }
 
 
