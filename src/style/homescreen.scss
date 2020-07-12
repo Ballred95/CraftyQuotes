@@ -14,18 +14,17 @@ body {
     background-color: #E7E7E7;
     border: 5px solid #CACACA;
     min-height: -webkit-fill-available;
-    position: fixed;
+    // position: fixed;
     
 
     .work-station-wrapper {
         height: 87vh;
-        width: 100vw;
+        // width: 100vw;
     }
 
     .tools {
         height: Calc(100vh - 87vh);
-        margin-bottom: 50px;
-        border-bottom:5px solid #CACACA; 
+        
     }
 }
 
