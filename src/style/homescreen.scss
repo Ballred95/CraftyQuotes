@@ -1,14 +1,19 @@
-
+html {
+    margin: 0px;
+    padding: 0px;
+    min-height: -webkit-fill-available;
+}
 
 body {
     margin: 0px;
     padding: 0px;
+    min-height: -webkit-fill-available;
 }
 
 .home-screen-wrapper {
     background-color: #E7E7E7;
     border: 5px solid #CACACA;
-    height: 100vh;
+    min-height: -webkit-fill-available;
 
     .work-station-wrapper {
         height: 87vh;

@@ -1,6 +1,6 @@
 import React, {Component} from 'react' 
 
-export default class WorkStation extends Component {
+export default class Workstation extends Component {
     constructor(props) {
         super(props)
 
