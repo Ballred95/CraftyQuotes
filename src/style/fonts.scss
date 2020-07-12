@@ -3,5 +3,11 @@
     width: 5em;
     height: 5em;
     border-radius: 100%;
-    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .font {
+        font-size: 2em;
+    }
 }

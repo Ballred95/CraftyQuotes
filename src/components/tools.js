@@ -7,8 +7,8 @@ export default function Tools(props) {
     return (
     <div className='tools'>
         <Pics />
-        <Clipart />
         <Fonts />
+        <Clipart />
     </div>
     )
 }
