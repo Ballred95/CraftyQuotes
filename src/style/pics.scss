@@ -7,10 +7,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
     
     .pics {
         font-size: 2em;
-        color: #969696
+        color: #969696;
+        
     }
 }
 

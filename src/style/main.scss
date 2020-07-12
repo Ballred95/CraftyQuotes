@@ -1,7 +1,10 @@
-
 @import './homescreen.scss';
 @import './tools.scss';
 @import './pics.scss';
 @import './fonts.scss';
 @import './clip-art.scss';
+
+html, body {
+    height: 100%;
+}
 
