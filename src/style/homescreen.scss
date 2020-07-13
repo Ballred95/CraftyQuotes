@@ -21,7 +21,7 @@ body {
     
 
     .pic-render{
-        background-color: red;
+        // background-color: red;
         min-height: 68vh;
         
         // .unsplash {
@@ -34,6 +34,15 @@ body {
         margin-top: 2em;
         display: flex;
         justify-content: space-around;
+
+        button {
+            background: rgb(75,100,255);
+            background: linear-gradient(77deg, rgba(75,100,255,1) 0%, rgba(232,21,242,1) 100%);
+            width: 100px;
+            height: 30px;
+            border: none;
+            border-radius: 10px;
+        }
     }
 
 }
