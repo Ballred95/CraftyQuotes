@@ -23,7 +23,7 @@ export default class Pics extends Component {
 
     render () {
     return (
-    <div style = {{cursor: 'pointer'}}  className='pics-container'>
+    <div style = {{cursor: 'pointer'}} onClick = {this.props.renderFunction} className='pics-container'>
        <FontAwesomeIcon className = 'pics' icon={faCameraRetro} />
         
     </div>
