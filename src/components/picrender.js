@@ -37,7 +37,7 @@ export default class PicRender extends Component {
   
     return (
       <div className='app'>
-       <img src={this.state.data} />
+       <img style = {{minHeight: '100%', minWidth: '100%'}} src={this.state.data} />
       </div>
     );
   }

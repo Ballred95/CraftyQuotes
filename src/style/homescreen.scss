@@ -11,20 +11,28 @@ body {
 }
 
 .home-screen-wrapper {
-    display: flex;
+    // display: flex;
     background-color: #E7E7E7;
     border: 5px solid #CACACA;
     align-items: flex-end;
     min-height: -webkit-fill-available;
     position: fixed;
     min-width: -webkit-fill-available;
-
     
 
-    // .work-station-wrapper {
-    //     height: 87vh;
+    .pic-render{
+        background-color: red;
+        height: 87vh;
         
+    }    
+
+    // .work-station-wrapper {
+    //     background-color: red;
+    //     color: red;
+    //     height: 87vh;
+    //     width: 97vw;
     // }
+
 }
    
 

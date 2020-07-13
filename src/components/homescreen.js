@@ -3,6 +3,7 @@ import Pics from './pics'
 import Clipart from './clipart'
 import Fonts from './fonts'
 import PicRender from './picrender'
+import Workstation from './workstation'
 
 
 
@@ -19,7 +20,8 @@ export default class Homescreen extends Component{
     render() {
     return (
     <div className='home-screen-wrapper'>
-        {this.state.picRender}
+        {/* <Workstation rendering = {this.state.picRender} /> */}
+        <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
         <Pics renderFunction = {()=> this.setState({picRender: <PicRender />})}/>
         <Fonts />

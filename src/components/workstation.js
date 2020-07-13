@@ -13,7 +13,7 @@ export default class Workstation extends Component {
 render() {
         return (
             <div className = 'work-station-wrapper'>
-                
+                {this.props.rendering}
             </div>
         )
     }
