@@ -1,15 +1,32 @@
-import React from 'react' 
-import Tools from './tools'
-import Workstation from './workstation'
+import React, {Component} from 'react' 
+import Pics from './pics'
+import Clipart from './clipart'
+import Fonts from './fonts'
 
 
-export default function Homescreen(props) {
+
+export default class Homescreen extends Component{
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+          picRender: null
+        }
+    
+        
+      }
+    render() {
     return (
     <div className='home-screen-wrapper'>
-        <Workstation />
-        <Tools />
-            
+        
+        <div className='tools'>
+        <Pics />
+        <Fonts />
+        <Clipart />
+    </div>
+        
         
     </div>
     )
+}
 }

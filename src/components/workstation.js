@@ -8,6 +8,7 @@ export default class Workstation extends Component {
             
         }
     }
+    
 
 render() {
         return (
