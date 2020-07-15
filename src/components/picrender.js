@@ -1,43 +1,39 @@
-
-
 import React, { Component } from 'react';
+import Imagesearch from './image_search/imagesearch';
+import Imagelist from './image_list/imagelist'
+
+const API_KEY = '17478784-735f4f1d92940cc091944cc00'
 
 
 
+export default class Picrender extends Component {
 
-
-export default class PicRender extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      data: null
-    }
-
-    this.handleGetData = this.handleGetData.bind(this)
-  }
-  
-  handleGetData() {
-    fetch('https://api.unsplash.com/search/photos/?client_id=HN_kjPdQ-BoIKjcaX0ItpS0T0R4_CJb2C3ZycC6pWQI&query=flower', {method: 'GET'})
-    .then(response => response.json())
-    .then(data => this.setState({data: data.results[5].urls.small}))
-    .catch(error => console.log(error))
-
-    
-    
+  state = {
+    images: []
   }
 
-  componentDidMount() {
-    this.handleGetData()
+  handleGetRequest = async (e) => {
+    e.preventDefault()
+    const searchTerm = e.target.elements.searchValue.value
+    const url = `https://pixabay.com/api/?key=${API_KEY}&q=${searchTerm}&image_type=photo`
+    const request = await fetch(url)
+    const response = await request.json()
+    this.setState({images: response.hits})
+    console.log(this.state.images)
+    
   }
 
   
 
   render() {
-  
+
+    
+
     return (
-      <div className='unsplash'>
-       <img  src={this.state.data} />
+      <div className='pic-render'>
+        <Imagesearch handleGetRequest ={this.handleGetRequest} />
+        
+        <Imagelist images = {this.state.images} />
       </div>
     );
   }
