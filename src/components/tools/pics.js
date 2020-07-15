@@ -1,7 +1,7 @@
 import React, { Component } from 'react' 
 import { faCameraRetro } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import PicRender from './picrender';
+import PicRender from '../picrender';
 
 
 

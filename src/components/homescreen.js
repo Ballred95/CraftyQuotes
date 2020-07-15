@@ -1,9 +1,9 @@
 import React, {Component} from 'react' 
-import Pics from './pics'
-import Clipart from './clipart'
-import Fonts from './fonts'
+import Pics from './tools/pics'
+import Clipart from './tools/clipart'
+import Fonts from './tools/fonts'
 import PicRender from './picrender'
-import Workstation from './workstation'
+
 
 
 
