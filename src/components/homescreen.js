@@ -23,7 +23,7 @@ export default class Homescreen extends Component{
         {/* <Workstation rendering = {this.state.picRender} /> */}
         <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
-            <Pics renderFunction = {()=> this.setState({picRender: <PicRender />})}/>
+            <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
             <Fonts />
             <Clipart />
         
