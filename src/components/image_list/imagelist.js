@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Imagelist(props) {
     return (
-    <div className=''>
+    <div className='image_container'>
         {props.images.map(image => {
-            return <img src={image.previewURL} />
+            return <img className='imgs' src={image.previewURL} />
         })}
     </div>
     )

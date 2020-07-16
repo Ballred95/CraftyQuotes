@@ -10,6 +10,18 @@ body {
     min-height: -webkit-fill-available;
 }
 
+// .form_container {
+//     height: 5vh;
+//     overflow: hidden;
+// }
+// .image_container {
+//     height: 63vh;
+//     overflow: auto;
+// }
+
+
+.home-screen-wrapper .pic-render {     max-height: 68vh;     overflow: scroll; }
+
 .home-screen-wrapper {
     // display: flex;
     background-color: #E7E7E7;
