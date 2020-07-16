@@ -33,7 +33,7 @@ export default class Picrender extends Component {
       <div className=''>
         <Imagesearch handleGetRequest ={this.handleGetRequest} />
         
-        <Imagelist images = {this.state.images} />
+        <Imagelist images = {this.state.images}  />
       </div>
     );
   }
