@@ -18,7 +18,8 @@ body {
 //     height: 63vh;
 //     overflow: auto;
 // }
-
+body { font-size: 16px; }
+input, select { font-size: 100%; }
 
 .home-screen-wrapper .pic-render {     max-height: 68vh;     overflow: scroll; }
 
