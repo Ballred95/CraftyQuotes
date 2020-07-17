@@ -10,9 +10,9 @@ export default class Pics extends Component {
     constructor(props) {
         super(props)
     
-        this.state = {
-          show: null
-        }
+        // this.state = {
+        //   show: null
+        // }
         
       
         
