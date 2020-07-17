@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Clipart(props) {
     return (
     <div className='clip-art'>
-        <FontAwesomeIcon className = 'icon' icon={faIcons} />
+        <FontAwesomeIcon style = {{cursor: 'pointer'}} onClick = {props.renderFunction} className = 'icon' icon={faIcons} />
     </div>
     )
 }
