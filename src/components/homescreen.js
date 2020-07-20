@@ -13,7 +13,7 @@ export default class Homescreen extends Component{
     
         this.state = {
           picRender: null,
-          fontState: "fontstate test"
+          fontState: ""
         }
     
         
