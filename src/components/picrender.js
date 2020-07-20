@@ -38,7 +38,7 @@ this.handleGetRequest=this.handleGetRequest.bind(this)
       <div className=''>
         <Imagesearch handleGetRequest ={this.handleGetRequest} />
         
-        <Imagelist images = {this.state.images} clh = {()=>this.setState({fullscreen: 'test'})} />
+        <Imagelist images = {this.state.images} />
       </div>
     );
   }

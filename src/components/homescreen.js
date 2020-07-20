@@ -12,7 +12,8 @@ export default class Homescreen extends Component{
         super(props)
     
         this.state = {
-          picRender: null
+          picRender: null,
+          fontState: null
         }
     
         
@@ -24,7 +25,7 @@ export default class Homescreen extends Component{
         <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
             <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
-            <Fonts renderFunction = {()=> this.setState({picRender: 'Typing and Font Selection'})} />
+            <Fonts test = {() => this.setState({fontState: 'test font'})} />
             <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
         
         </div> 
