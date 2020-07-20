@@ -1,4 +1,5 @@
 import React from 'react' 
+import {link, Link} from 'react-router-dom'
 
 
 export default function Imagelist(props) {
@@ -11,7 +12,12 @@ export default function Imagelist(props) {
                 <img className='imageList_image' src={image.largeImageURL} />
                 </div>
                 <div className = 'image_details'>
-                    <button>Select</button>
+                    <Link to = {{
+                        pathname: `/image/${image.id}`,
+                        state: {image: image}
+                    }}>
+                        <button>Select</button>
+                    </Link>
                 </div>
             </div>)
         })}

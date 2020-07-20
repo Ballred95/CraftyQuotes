@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom'
 
 import Homescreen from './homescreen';
+import Imageview from './imageview/imageview';
 
 
 
@@ -17,10 +18,12 @@ export default class App extends Component {
   
   render() {
     return (
-      <div className='app'>
-        <Homescreen />
-       
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path = '/' component = {Homescreen} />
+          <Route path ='/image/:id' component={Imageview} />
+        </Switch>
+      </Router>
     );
   }
 }
