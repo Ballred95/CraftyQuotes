@@ -90,7 +90,15 @@ img {
     height: 68vh;
 }
 
-
+.parent {
+    position: relative;
+    .pic-render{}
+    .font-state {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+    }
+}
 
 
 
