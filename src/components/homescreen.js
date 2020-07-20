@@ -13,7 +13,7 @@ export default class Homescreen extends Component{
     
         this.state = {
           picRender: null,
-          fontState: null
+          fontState: "fontstate test"
         }
     
         
@@ -21,11 +21,11 @@ export default class Homescreen extends Component{
     render() {
     return (
     <div className='home-screen-wrapper'>
-        {/* <Workstation rendering = {this.state.picRender} /> */}
+        <div className = 'font-state'>{this.state.fontState}</div>
         <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
             <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
-            <Fonts test = {() => this.setState({fontState: 'test font'})} />
+            <Fonts changeState = {()=> this.setState({fontState: "changed success" })} />
             <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
         
         </div> 

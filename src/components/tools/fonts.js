@@ -23,6 +23,7 @@ export default class Fonts extends Component {
 
       handleSubmit() {
         this.setState({finalValue: this.state.inputValue})
+        this.props.changeState()
       }
     
 render() {
@@ -32,7 +33,7 @@ render() {
             <FontAwesomeIcon className = 'font' icon={faFont} />
         </div>} position = "top center" >
             <div>
-                <h3>Type/Font Selector</h3>
+                <h3>Type/Font Selector {this.state.finalValue}</h3>
                 
                     <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
                     <button onClick = {this.handleSubmit}>Submit</button>
