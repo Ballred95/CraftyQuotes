@@ -9,7 +9,10 @@ export default function Fonts(props) {
     <div style = {{cursor: 'pointer'}} onClick = {props.renderFunction} className='fonts-container'>
         <FontAwesomeIcon className = 'font' icon={faFont} />
     </div>} position = "top center" >
-        <div>font picker popup.</div>
+        <div>
+            <h3>Type/Font Selector</h3>
+            <input type='text' />
+        </div>
     </Popup>
     )
 }

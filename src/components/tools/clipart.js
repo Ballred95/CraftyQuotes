@@ -9,7 +9,9 @@ export default function Clipart(props) {
             <div style = {{cursor: 'pointer'}} onClick = {props.renderFunction} className='clip-art'>
                 <FontAwesomeIcon className = 'icon' icon={faIcons} />
             </div>} position = "top center" >
-                <div>Clip art picker popup.</div>
+                <div>
+                    <h3>Clip art Selector</h3>
+                </div>
             </Popup>
     )
 }
