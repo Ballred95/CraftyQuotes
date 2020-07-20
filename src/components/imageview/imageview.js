@@ -23,8 +23,9 @@ export default class Imageview extends Component {
     render() {
         return (
         <div className='home-screen-wrapper'>
-            {/* <Workstation rendering = {this.state.picRender} /> */}
             <div className ='pic-render'>{this.state.picRender}</div>
+            <div className = 'font-state'>{this.state.fontState}</div>
+            
             <div className='tools'>
                 <Pics renderFunction = {()=> this.setState({picRender: <PicRender/>})}/>
                 <Fonts 
