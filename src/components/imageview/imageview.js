@@ -26,8 +26,10 @@ export default class Imageview extends Component {
             {/* <Workstation rendering = {this.state.picRender} /> */}
             <div className ='pic-render'>{this.state.picRender}</div>
             <div className='tools'>
-                <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
-                <Fonts renderFunction = {()=> this.setState({picRender: 'Typing and font selection'})} />
+                <Pics renderFunction = {()=> this.setState({picRender: <PicRender/>})}/>
+                <Fonts 
+              changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
+            />
                 <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart selection'})} />
             
             </div> 
