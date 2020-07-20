@@ -18,6 +18,9 @@ export default class Homescreen extends Component{
     
         
       }
+
+      
+      
     render() {
     return (
     <div className='home-screen-wrapper'>
@@ -25,7 +28,9 @@ export default class Homescreen extends Component{
         <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
             <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
-            <Fonts changeState = {()=> this.setState({fontState: "changed success" })} />
+            <Fonts 
+              changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
+            />
             <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
         
         </div> 

@@ -22,8 +22,9 @@ export default class Fonts extends Component {
       }
 
       handleSubmit() {
-        this.setState({finalValue: this.state.inputValue})
-        this.props.changeState()
+        this.setState({finalValue: this.state.inputValue}, 
+        ()=>this.props.changeFont(this.state.finalValue)) //callback
+        
       }
     
 render() {
