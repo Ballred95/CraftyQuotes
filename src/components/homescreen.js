@@ -24,8 +24,8 @@ export default class Homescreen extends Component{
         <div className ='pic-render'>{this.state.picRender}</div>
         <div className='tools'>
             <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
-            <Fonts renderFunction = {()=> this.setState({picRender: 'what font u want?'})} />
-            <Clipart renderFunction = {()=> this.setState({picRender: 'what clipart u want?'})} />
+            <Fonts renderFunction = {()=> this.setState({picRender: 'Typing and Font Selection'})} />
+            <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
         
         </div> 
         <div className='buttons'>
