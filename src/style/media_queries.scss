@@ -4,5 +4,13 @@
         display: flex !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .container .row .col-md-4 {
+        width: 20% !important;
+        height: 50% !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
     }
 }
