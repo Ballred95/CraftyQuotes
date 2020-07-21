@@ -1,10 +1,8 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .container {
-    .image_details{
-        button {
-            background-color: yellow;
-        }
+    .row {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
     }
-}
 }
