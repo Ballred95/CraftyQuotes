@@ -3,6 +3,7 @@ import Pics from '../tools/pics'
 import Clipart from '../tools/clipart'
 import Fonts from '../tools/fonts'
 import PicRender from '../picrender'
+import {Link} from 'react-router-dom'
 
 
 
@@ -28,7 +29,9 @@ export default class Imageview extends Component {
                 <div className = 'font-state'>{this.state.fontState}</div>
             </div>
             <div className='tools'>
-                <Pics renderFunction = {()=> this.setState({picRender: <PicRender/>})}/>
+                <Link to = {{
+                    pathname: '/'
+                }}><Pics /></Link>
                 <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
             />
