@@ -35,6 +35,7 @@ export default class Homescreen extends Component{
         
         </div> 
         <div className='buttons'>
+        <button onClick={()=>this.setState({picRender: <img src = "https://pixabay.com/get/53e3dc474a50aa14f6da8c7dda7936791138d6e25b556c4870267ed09448cc58b8_1280.jpg"/>})}>Load</button>
         <button>Save</button>
         <button>Export</button> 
         </div>
