@@ -18,7 +18,20 @@ export default class Imageview extends Component {
             picRender: <img src={image} />
         }
 
+        this.handleLoadRequest=this.handleLoadRequest.bind(this)
+
     }
+
+    handleLoadRequest = async (e) => {
+        e.preventDefault()
+        const url = "https://craftyquotes-api.herokuapp.com/saved"
+        const request = await fetch(url)
+        const response = await request.json()
+        this.setState({picRender: <img src ={response[1].imgsrc} />})
+        this.setState({fontState: response[1].text_content})
+        console.log()
+        
+      }
 
     
     render() {
@@ -39,6 +52,7 @@ export default class Imageview extends Component {
             
             </div> 
             <div className='buttons'>
+            <button id='load-button' onClick = {this.handleLoadRequest}>Load Previous</button>
             <button>Save</button>
             <button>Export</button> 
             </div>

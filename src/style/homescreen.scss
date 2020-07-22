@@ -55,6 +55,17 @@ input, select { font-size: 100%; }
 
 }
 
+#load-button {
+    background: rgb(75,100,255);
+            background: linear-gradient(77deg, rgba(75,100,255,1) 0%, rgba(232,21,242,1) 100%);
+            width: 100px;
+            height: 50px;
+            // height: 30px;
+            border: 2px solid #CACACA;
+            border-radius: 10px;
+            font-size: 1em;
+}
+
 .container{
     .row {display: flex;
         flex-direction: column;
