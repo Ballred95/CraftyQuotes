@@ -54,7 +54,7 @@ export default class Homescreen extends Component{
         
         </div> 
         <div className='buttons'>
-        <button id='load-button' onClick = {this.handleLoadRequest}>Load saved</button>
+        <button onClick = {this.handleLoadRequest}>Load saved</button>
         <button>Save</button>
         <button>Export</button> 
         </div>
