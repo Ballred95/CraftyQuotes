@@ -15,19 +15,32 @@ export default class Homescreen extends Component{
           picRender: null,
           fontState: ""
         }
-    
+        
+        this.renderFunction=this.renderFunction.bind(this)
         
       }
 
-      
+      componentDidMount() {
+        fetch('https://craftyquotes-api.herokuapp.com/saved')
+        .then(response => response.json())
+        .then(data => console.log(data));
+      }
+
+      renderFunction() {
+        this.setState({picRender: <PicRender  />})
+        this.setState({fontState: ""})
+      }
       
     render() {
     return (
     <div className='home-screen-wrapper'>
-        <div className ='pic-render'>{this.state.picRender}</div>
-        <div className = 'font-state'>{this.state.fontState}</div>
+        <div className = 'parent'>
+          <div className ='pic-render'>{this.state.picRender}</div>
+          <div className = 'font-state'>{this.state.fontState}</div>
+        </div>
+        
         <div className='tools'>
-            <Pics renderFunction = {()=> this.setState({picRender: <PicRender  />})}/>
+            <Pics renderFunction = {this.renderFunction}/>
             <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
             />
