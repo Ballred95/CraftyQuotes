@@ -18,7 +18,7 @@ export default class Imageview extends Component {
             picRender: <img src={image} />,
             imgsrc: image,
             fontState: "",
-            text_align: "font-state-center"
+            text_align: "font-state-left"
         }
 
         this.handleLoadRequest=this.handleLoadRequest.bind(this)
@@ -33,6 +33,7 @@ export default class Imageview extends Component {
         const response = await request.json()
         this.setState({picRender: <img src ={response[0].imgsrc} />})
         this.setState({fontState: response[0].text_content})
+        this.setState({text_align: response[0].text_align})
         console.log()
         alert('loaded images can only be viewed and not edited/saved at this time.')
         
@@ -46,7 +47,7 @@ export default class Imageview extends Component {
             name: "",
             imgsrc: this.state.imgsrc, 
             text_content: this.state.fontState,
-            text_align: "",
+            text_align: this.state.text_align,
             clipart: "" 
         })
     })

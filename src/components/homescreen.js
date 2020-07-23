@@ -32,6 +32,7 @@ export default class Homescreen extends Component{
         const response = await request.json()
         this.setState({picRender: <img src ={response[0].imgsrc} />})
         this.setState({fontState: response[0].text_content})
+        this.setState({text_align: response[0].text_align})
         console.log()
         
       }
