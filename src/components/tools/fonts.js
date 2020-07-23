@@ -8,7 +8,7 @@ export default class Fonts extends Component {
         super(props)
 
         this.state = {
-            inputValue: "placeholder",
+            inputValue: "",
             finalValue: ""
         }
         this.updateInputValue = this.updateInputValue.bind(this)
