@@ -10,10 +10,10 @@ import PicRender from './picrender'
 export default class Homescreen extends Component{
     constructor(props) {
         super(props)
+        
     
         this.state = {
           picRender: null,
-          imgsrc: image,
           fontState: ""
           
         }
@@ -41,7 +41,7 @@ export default class Homescreen extends Component{
         headers: {'content-type': 'application/json'},
         body: JSON.stringify({
             name: "",
-            imgsrc: this.state.imgsrc, 
+            imgsrc: this.state.picRender,
             text_content: this.state.fontState,
             text_align: "",
             clipart: "" 
@@ -75,7 +75,7 @@ export default class Homescreen extends Component{
         </div> 
         <div className='buttons'>
         <button onClick = {this.handleLoadRequest}>Load saved</button>
-        <button onClick={this.handleSaveRequest}>Save</button>
+        <button onClick={()=>alert("Must select a new Image to save.")}>Save</button>
         <button>Export</button> 
         </div>
     </div>
