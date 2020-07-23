@@ -14,7 +14,8 @@ export default class Homescreen extends Component{
     
         this.state = {
           picRender: null,
-          fontState: ""
+          fontState: "",
+          text_align: "font-state-left"
           
         }
         
@@ -62,13 +63,14 @@ export default class Homescreen extends Component{
     <div className='home-screen-wrapper'>
         <div className = 'parent'>
           <div className ='pic-render'>{this.state.picRender}</div>
-          <div className = 'font-state'>{this.state.fontState}</div>
+          <div className = {this.state.text_align}>{this.state.fontState}</div>
         </div>
         
         <div className='tools'>
             <Pics renderFunction = {this.renderFunction}/>
             <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
+              changeAlignment={(alignment)=>this.setState({text_align: alignment })}
             />
             <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
         

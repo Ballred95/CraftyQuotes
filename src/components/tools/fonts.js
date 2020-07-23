@@ -9,7 +9,9 @@ export default class Fonts extends Component {
 
         this.state = {
             inputValue: "",
-            finalValue: ""
+            finalValue: "",
+            alignment: "font-state-left"
+            
         }
         this.updateInputValue = this.updateInputValue.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -23,7 +25,10 @@ export default class Fonts extends Component {
 
       handleSubmit() {
         this.setState({finalValue: this.state.inputValue}, 
-        ()=>this.props.changeFont(this.state.finalValue)) //callback
+        ()=>this.props.changeFont(this.state.finalValue)), 
+        this.setState({text_align: this.state.alignment},
+        ()=>this.props.changeAlignment(this.state.alignment))
+
         
       }
     
@@ -34,7 +39,13 @@ render() {
             <FontAwesomeIcon className = 'font' icon={faFont} />
         </div>} position = "top center" >
             <div>
-                <h3>Type/Font Selector {this.state.finalValue}</h3>
+                <h3>Type {this.state.finalValue}</h3>
+                    <div className='alignment'>
+                        <button onClick={()=>this.setState({alignment: "font-state-left"})} >Left</button>
+                        <button onClick={()=>this.setState({alignment: "font-state-center"})} >Center</button>
+                        <button onClick={()=>this.setState({alignment: "font-state-right"})} >Right</button>
+
+                    </div>
                 
                     <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
                     <button onClick = {this.handleSubmit}>Submit</button>

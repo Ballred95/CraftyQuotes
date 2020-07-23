@@ -104,11 +104,29 @@ img {
 .parent {
     position: relative;
     .pic-render{}
-    .font-state {
+    .font-state-left {
         position: absolute;
         top: 50px;
         left: 50px;
+        color: #777;
+        font-size: xx-large;
     }
+    .font-state-right {
+        position: absolute;
+        top: 50px;
+        left: 300px;
+        color: #777;
+        font-size: xx-large;
+    }
+
+    .font-state-center {
+        position: absolute;
+        top: 50px;
+        left: 150px;
+        color: #777;
+        font-size: xx-large;
+    }
+
 }
 
 

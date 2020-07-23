@@ -13,4 +13,32 @@
         margin-left: 5px !important;
         margin-right: 5px !important;
     }
+
+    .parent {
+        position: relative;
+        .pic-render{}
+        .font-state-left {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            color: #777;
+            font-size: xx-large;
+        }
+        .font-state-right {
+            position: absolute;
+            top: 50px;
+            left: 1100px !important;
+            color: #777;
+            font-size: xx-large;
+        }
+    
+        .font-state-center {
+            position: absolute;
+            top: 50px;
+            left: 550px !important;
+            color: #777;
+            font-size: xx-large;
+        }
+    
+    }
 }

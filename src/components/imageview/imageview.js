@@ -17,7 +17,8 @@ export default class Imageview extends Component {
         this.state = {
             picRender: <img src={image} />,
             imgsrc: image,
-            fontState: ""
+            fontState: "",
+            text_align: "font-state-center"
         }
 
         this.handleLoadRequest=this.handleLoadRequest.bind(this)
@@ -33,6 +34,7 @@ export default class Imageview extends Component {
         this.setState({picRender: <img src ={response[0].imgsrc} />})
         this.setState({fontState: response[0].text_content})
         console.log()
+        alert('loaded images can only be viewed and not edited/saved at this time.')
         
       }
 
@@ -60,7 +62,7 @@ export default class Imageview extends Component {
         <div className='home-screen-wrapper'>
             <div className = 'parent'>
                 <div className ='pic-render'>{this.state.picRender}</div>
-                <div className = 'font-state'>{this.state.fontState}</div>
+                <div className = {this.state.text_align}>{this.state.fontState}</div>
             </div>
             <div className='tools'>
                 <Link to = {{
@@ -68,6 +70,7 @@ export default class Imageview extends Component {
                 }}><Pics /></Link>
                 <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
+              changeAlignment={(alignment)=>this.setState({text_align: alignment })}
             />
                 <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart selection'})} />
             
