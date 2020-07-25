@@ -137,6 +137,11 @@ img {
         text-decoration: none;
         color: #969696;
         border: none;
+        display: flex;
+    align-items: center;
+    border-radius: 20%;
+    width: 2em;
+    height: 2em;
 
         &:focus {
             background-color: #969696;
