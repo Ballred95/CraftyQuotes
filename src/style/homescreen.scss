@@ -31,9 +31,9 @@ input, select { font-size: 100%; }
     .pic-render{
         
         min-height: 68vh;
-        
-       
-        
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }    
 
     .buttons {
@@ -129,6 +129,23 @@ img {
 
 }
 
+.alignment{
+    display: flex;
+    justify-content: space-around;
+    button{
+        background-color: pink;
+        text-decoration: none;
+        color: #969696;
+        border: none;
+
+        &:focus {
+            background-color: #969696;
+            color: pink;
+            border: none;
+            text-decoration: none;
+        }
+    }
+}
 
 
    

@@ -13,7 +13,7 @@ export default class Homescreen extends Component{
         
     
         this.state = {
-          picRender: null,
+          picRender: <PicRender  />,
           fontState: "",
           text_align: "font-state-left"
           

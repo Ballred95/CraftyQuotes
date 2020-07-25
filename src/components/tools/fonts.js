@@ -41,9 +41,9 @@ render() {
             <div>
                 <h3>Type {this.state.finalValue}</h3>
                     <div className='alignment'>
-                        <button onClick={()=>this.setState({alignment: "font-state-left"})} >Left</button>
-                        <button onClick={()=>this.setState({alignment: "font-state-center"})} >Center</button>
-                        <button onClick={()=>this.setState({alignment: "font-state-right"})} >Right</button>
+                        <button className='left-button' onClick={()=>this.setState({alignment: "font-state-left"})} >Left</button>
+                        <button className='center-button' onClick={()=>this.setState({alignment: "font-state-center"})} >Center</button>
+                        <button className='right-button' onClick={()=>this.setState({alignment: "font-state-right"})} >Right</button>
 
                     </div>
                 
