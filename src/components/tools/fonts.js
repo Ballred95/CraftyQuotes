@@ -10,7 +10,8 @@ export default class Fonts extends Component {
         this.state = {
             inputValue: "",
             finalValue: "",
-            alignment: "font-state-left"
+            alignment: "font-state-left",
+            
             
         }
         this.updateInputValue = this.updateInputValue.bind(this)

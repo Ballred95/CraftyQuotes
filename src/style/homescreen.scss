@@ -16,7 +16,7 @@ body {
 body { font-size: 16px; }
 input, select { font-size: 100%; }
 
-.home-screen-wrapper .pic-render {     max-height: 68vh;     overflow: scroll; }
+.home-screen-wrapper .pic-render {     max-height: 65vh;     overflow: scroll; }
 
 .home-screen-wrapper {
     // display: flex;
@@ -30,7 +30,7 @@ input, select { font-size: 100%; }
 
     .pic-render{
         
-        min-height: 68vh;
+        min-height: 65vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -98,7 +98,7 @@ input, select { font-size: 100%; }
 
 img {
     width: 100%;
-    height: 68vh;
+    height: 65vh;
 }
 
 .parent {
