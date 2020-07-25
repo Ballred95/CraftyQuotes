@@ -73,7 +73,7 @@ export default class Imageview extends Component {
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
               changeAlignment={(alignment)=>this.setState({text_align: alignment })}
             />
-                <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart selection'})} />
+                
             
             </div> 
             <div className='buttons'>
