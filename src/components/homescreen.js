@@ -1,8 +1,8 @@
 import React, {Component} from 'react' 
 import Pics from './tools/pics'
-import Clipart from './tools/clipart'
 import Fonts from './tools/fonts'
 import PicRender from './picrender'
+import Imagesearch from './image_search/imagesearch'
 
 
 
@@ -55,6 +55,7 @@ export default class Homescreen extends Component{
     }
 
       renderFunction() {
+        
         this.setState({picRender: <PicRender  />})
         this.setState({fontState: ""})
       }
