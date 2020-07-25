@@ -73,13 +73,13 @@ export default class Homescreen extends Component{
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
               changeAlignment={(alignment)=>this.setState({text_align: alignment })}
             />
-            <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} />
+            {/* <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} /> */}
         
         </div> 
         <div className='buttons'>
         <button onClick = {this.handleLoadRequest}>Load saved</button>
         <button onClick={()=>alert("Must select a new Image to save.")}>Save</button>
-        <button>Export</button> 
+        
         </div>
     </div>
     )

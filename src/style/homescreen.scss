@@ -39,7 +39,7 @@ input, select { font-size: 100%; }
     .buttons {
         margin-top: 2em;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-evenly;
 
         button {
             background: rgb(75,100,255);
