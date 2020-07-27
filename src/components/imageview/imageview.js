@@ -67,7 +67,7 @@ export default class Imageview extends Component {
         <div className='home-screen-wrapper'>
             <div className = 'parent'>
                 <div className ='pic-render'>{this.state.picRender}</div>
-                <div className = {this.state.text_align} style={{color: this.state.clipart}}>{this.state.fontState}</div>
+                <div className = {this.state.text_align} style={{width: '150px'}} style={{color: this.state.clipart}}>{this.state.fontState}</div>
             </div>
             <div className='tools'>
                 <Link to = {{
