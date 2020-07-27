@@ -19,7 +19,8 @@ export default class Imageview extends Component {
             imgsrc: image,
             fontState: "",
             text_align: "font-state-left",
-            clipart: "red"
+            clipart: "red",
+            saved: "Save"
         }
 
         this.handleLoadRequest=this.handleLoadRequest.bind(this)
@@ -56,6 +57,7 @@ export default class Imageview extends Component {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.log('error putting save ', error))
+    this.setState({saved: 'Saved!'})
     }
         
         
@@ -81,7 +83,7 @@ export default class Imageview extends Component {
             </div> 
             <div className='buttons'>
             
-            <button onClick={this.handleSaveRequest}>Save</button>
+            <button onClick={this.handleSaveRequest}>{this.state.saved}</button>
             
             </div>
         </div>

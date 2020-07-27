@@ -93,7 +93,7 @@ img {
 }
 
 .parent {
-    position: relative;
+    // position: relative;
     .pic-render{}
     .font-state-left {
         position: fixed;
@@ -154,6 +154,8 @@ form{
         border-radius: 20px;
         border: none;
         color: white;
+        box-sizing: border-box;
+        padding-left: 10px;
     }
     button{
         border: none;
@@ -165,5 +167,23 @@ form{
     border-radius: 20px;
     font-size: 1em;
     }
+}
+
+.font-input  {
+    
+        background-color: black;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        box-sizing: border-box;
+        padding-left: 10px;
+    
+}
+
+#summit {
+    border: none;
+    background-color: pink;
+    color: grey;
+    margin-top: 20px;
 }
 

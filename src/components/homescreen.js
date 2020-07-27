@@ -72,7 +72,7 @@ export default class Homescreen extends Component{
         
         <div className='tools'>
             <Pics renderFunction = {this.renderFunction}/>
-            <h2>Select Image then type in Quote</h2>
+            <h2 style={{marginLeft: '30px'}}>Select Image then type in Quote</h2>
             {/* <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
               changeAlignment={(alignment)=>this.setState({text_align: alignment })}

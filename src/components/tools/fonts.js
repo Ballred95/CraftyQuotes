@@ -75,10 +75,10 @@ render() {
 
                     </div>
                     <h3>Text</h3>
-                    <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
+                    <input value={this.state.inputValue} className='font-input' onChange={e => this.updateInputValue(e)} />
                     <h3>Color Selection</h3>
-                    <input value={this.state.colorInputValue} onChange={e => this.updateColorInputValue(e)} />
-                    <button onClick = {this.handleSubmit}>Submit</button>
+                    <input value={this.state.colorInputValue} className='font-input' onChange={e => this.updateColorInputValue(e)} />
+                    <button onClick = {this.handleSubmit} id='summit'>Submit</button>
                 
                 
             </div>
