@@ -54,7 +54,7 @@ render() {
         </div>} position = "top center" >
             <div>
                 
-                <h3>Type {this.state.finalValue}</h3>
+                <h3>Align</h3>
                 
                     <div className='alignment'>
                         <button className='left-button' onClick={()=>this.setState({alignment: "font-state-left"})} ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-align-start" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -74,8 +74,9 @@ render() {
                         </button>
 
                     </div>
-
+                    <h3>Text</h3>
                     <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
+                    <h3>Color Selection</h3>
                     <input value={this.state.colorInputValue} onChange={e => this.updateColorInputValue(e)} />
                     <button onClick = {this.handleSubmit}>Submit</button>
                 
