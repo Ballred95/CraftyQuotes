@@ -20,14 +20,14 @@
         .font-state-left {
             position: absolute;
             top: 50px;
-            left: 50px;
+            left: 350px;
             color: #777;
             font-size: xx-large;
         }
         .font-state-right {
             position: absolute;
             top: 50px;
-            left: 1100px !important;
+            left: 900px !important;
             color: #777;
             font-size: xx-large;
         }
@@ -35,7 +35,7 @@
         .font-state-center {
             position: absolute;
             top: 50px;
-            left: 550px !important;
+            left: 650px !important;
             color: #777;
             font-size: xx-large;
         }
@@ -43,6 +43,12 @@
     }
 
     .pic-render {
+        img {
+            padding-top: 20px;
+    width: 50%;
+    height: 50%;
+    margin-left: 300px;
+        }
         min-height: 75vh !important;
     }
 }
