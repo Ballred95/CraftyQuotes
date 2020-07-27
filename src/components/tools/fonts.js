@@ -3,6 +3,7 @@ import { faFont } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popup from "reactjs-popup";
 
+
 export default class Fonts extends Component {
     constructor(props){
         super(props)
@@ -11,10 +12,13 @@ export default class Fonts extends Component {
             inputValue: "",
             finalValue: "",
             alignment: "font-state-left",
+            color:'purple',
+            colorInputValue: 'purple',
             
             
         }
         this.updateInputValue = this.updateInputValue.bind(this)
+        this.updateColorInputValue = this.updateColorInputValue.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
     
@@ -24,11 +28,20 @@ export default class Fonts extends Component {
         });
       }
 
+      updateColorInputValue(e) {
+        this.setState({
+          colorInputValue: e.target.value
+        });
+      }
+
       handleSubmit() {
         this.setState({finalValue: this.state.inputValue}, 
         ()=>this.props.changeFont(this.state.finalValue)), 
         this.setState({text_align: this.state.alignment},
         ()=>this.props.changeAlignment(this.state.alignment))
+        this.setState({color: this.state.colorInputValue},
+        ()=>this.props.changeColor(this.state.color))
+        
 
         
       }
@@ -40,7 +53,9 @@ render() {
             <FontAwesomeIcon className = 'font' icon={faFont} />
         </div>} position = "top center" >
             <div>
+                
                 <h3>Type {this.state.finalValue}</h3>
+                
                     <div className='alignment'>
                         <button className='left-button' onClick={()=>this.setState({alignment: "font-state-left"})} ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-align-start" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" d="M1.5 1a.5.5 0 0 1 .5.5v13a.5.5 0 0 1-1 0v-13a.5.5 0 0 1 .5-.5z"/>
@@ -59,8 +74,9 @@ render() {
                         </button>
 
                     </div>
-                
+
                     <input value={this.state.inputValue} onChange={e => this.updateInputValue(e)} />
+                    <input value={this.state.colorInputValue} onChange={e => this.updateColorInputValue(e)} />
                     <button onClick = {this.handleSubmit}>Submit</button>
                 
                 

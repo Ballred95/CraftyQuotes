@@ -15,7 +15,8 @@ export default class Homescreen extends Component{
         this.state = {
           picRender: <PicRender  />,
           fontState: "",
-          text_align: "font-state-left"
+          text_align: "font-state-left",
+          clipart: ""
           
         }
         
@@ -33,6 +34,7 @@ export default class Homescreen extends Component{
         this.setState({picRender: <img src ={response[0].imgsrc} />})
         this.setState({fontState: response[0].text_content})
         this.setState({text_align: response[0].text_align})
+        this.setState({clipart: response[0].clipart})
         console.log()
         
       }
@@ -65,21 +67,22 @@ export default class Homescreen extends Component{
     <div className='home-screen-wrapper'>
         <div className = 'parent'>
           <div className ='pic-render'>{this.state.picRender}</div>
-          <div className = {this.state.text_align}>{this.state.fontState}</div>
+          <div className = {this.state.text_align} style={{color: this.state.clipart}}>{this.state.fontState}</div>
         </div>
         
         <div className='tools'>
             <Pics renderFunction = {this.renderFunction}/>
-            <Fonts 
+            <h2>Select Image then type in Quote</h2>
+            {/* <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
               changeAlignment={(alignment)=>this.setState({text_align: alignment })}
-            />
+            /> */}
             {/* <Clipart renderFunction = {()=> this.setState({picRender: 'Sticker and Clipart Selection'})} /> */}
         
         </div> 
         <div className='buttons'>
-        <button onClick = {this.handleLoadRequest}>Load saved</button>
-        <button onClick={()=>alert("Must select a new Image to save.")}>Save</button>
+        <button onClick = {this.handleLoadRequest}>Load</button>
+        {/* <button onClick={()=>alert("Must select a new Image to save.")}>Save</button> */}
         
         </div>
     </div>

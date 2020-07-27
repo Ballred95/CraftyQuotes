@@ -53,16 +53,7 @@ input, select { font-size: 100%; }
 
 }
 
-#load-button {
-    background: rgb(75,100,255);
-            background: linear-gradient(77deg, rgba(75,100,255,1) 0%, rgba(232,21,242,1) 100%);
-            width: 100px;
-            height: 50px;
-            // height: 30px;
-            border: 2px solid #CACACA;
-            border-radius: 10px;
-            font-size: 1em;
-}
+
 
 .container{
     .row {display: flex;
@@ -105,26 +96,23 @@ img {
     position: relative;
     .pic-render{}
     .font-state-left {
-        position: absolute;
+        position: fixed;
         top: 50px;
-        left: 50px;
-        color: #777;
-        font-size: xx-large;
+        left: 25%;
+        
     }
     .font-state-right {
-        position: absolute;
+        position: fixed;
         top: 50px;
-        left: 300px;
-        color: #777;
-        font-size: xx-large;
+        left: 75%;
+        
     }
 
     .font-state-center {
-        position: absolute;
+        position: fixed;
         top: 50px;
-        left: 150px;
-        color: #777;
-        font-size: xx-large;
+        left: 50%;
+        
     }
 
 }
@@ -161,14 +149,21 @@ img {
 }
 
 form{
+    input {
+        background-color: black;
+        border-radius: 20px;
+        border: none;
+        color: white;
+    }
     button{
         border: none;
     color: #969696;
     background-color: pink;
     margin-left: 1em;
-    width: 9em;
-    height: 4em;
+    // width: 9em;
+    // height: 4em;
     border-radius: 20px;
+    font-size: 1em;
     }
 }
 

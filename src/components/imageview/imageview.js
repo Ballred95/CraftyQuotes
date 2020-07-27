@@ -18,7 +18,8 @@ export default class Imageview extends Component {
             picRender: <img src={image} />,
             imgsrc: image,
             fontState: "",
-            text_align: "font-state-left"
+            text_align: "font-state-left",
+            clipart: "red"
         }
 
         this.handleLoadRequest=this.handleLoadRequest.bind(this)
@@ -34,6 +35,7 @@ export default class Imageview extends Component {
         this.setState({picRender: <img src ={response[0].imgsrc} />})
         this.setState({fontState: response[0].text_content})
         this.setState({text_align: response[0].text_align})
+        this.setState({clipart: response[0].clipart})
         console.log()
         alert('loaded images can only be viewed and not edited/saved at this time.')
         
@@ -48,7 +50,7 @@ export default class Imageview extends Component {
             imgsrc: this.state.imgsrc, 
             text_content: this.state.fontState,
             text_align: this.state.text_align,
-            clipart: "" 
+            clipart: this.state.clipart 
         })
     })
     .then(response => response.json())
@@ -63,7 +65,7 @@ export default class Imageview extends Component {
         <div className='home-screen-wrapper'>
             <div className = 'parent'>
                 <div className ='pic-render'>{this.state.picRender}</div>
-                <div className = {this.state.text_align}>{this.state.fontState}</div>
+                <div className = {this.state.text_align} style={{color: this.state.clipart}}>{this.state.fontState}</div>
             </div>
             <div className='tools'>
                 <Link to = {{
@@ -72,14 +74,15 @@ export default class Imageview extends Component {
                 <Fonts 
               changeFont={(finalValue)=> this.setState({fontState: finalValue})} 
               changeAlignment={(alignment)=>this.setState({text_align: alignment })}
+              changeColor={(color)=> this.setState({clipart: color})} 
             />
                 
             
             </div> 
             <div className='buttons'>
-            <button id='load-button' onClick = {this.handleLoadRequest}>Load saved</button>
+            
             <button onClick={this.handleSaveRequest}>Save</button>
-            <button>Export</button> 
+            
             </div>
         </div>
         )
